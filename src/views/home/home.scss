@@ -1,0 +1,31 @@
+.home-wrap {
+  .home-module-list {
+    display: flex;
+    & > li {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      align-items: center;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      transition: all .2s;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      & > a {
+        text-align: center;
+        color: #4D4D4D;
+        & > svg {
+          margin-bottom: 2px;
+        }
+        & > p {
+          font-size: 14px;
+        }
+      }
+      &:hover {
+        border-color: #53bd95;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const localStorage_key = '_lyman_i18n_cache';

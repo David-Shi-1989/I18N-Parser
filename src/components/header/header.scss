@@ -1,0 +1,45 @@
+@import '../../scss/variable.scss';
+.my-header {
+  display: flex;
+  height: $header-height;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  .logo {
+    background-image: url('../../assets/svg/i18n.svg');
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+  }
+  .title {
+    color: #111827;
+    font-size: 18px;
+    margin-left: 10px;
+    user-select: none;
+  }
+  & > ul {
+    display: flex;
+    margin: 0;
+    & > li {
+      cursor: pointer;
+      user-select: none;
+      &:hover .header-menu {
+        background-color: #eee;
+        opacity: 1;
+      }
+      .header-menu {
+        $icon-size: 20px;
+        display: block;
+        opacity: .5;
+        transition: opacity cubic-bezier(0.65,0.05,0.36,1) .15s;
+        padding: 8px;
+        border-radius: 50%;
+        & > div {
+          width: $icon-size;
+          height: $icon-size;
+        }
+      }
+    }
+  }
+}

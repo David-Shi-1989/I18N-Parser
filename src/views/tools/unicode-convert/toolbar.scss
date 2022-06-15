@@ -1,0 +1,19 @@
+$icon-size: 30px;
+.unicode-convert-toolbar {
+  display: flex;
+  & > li {
+    opacity: .6;
+    cursor: pointer;
+    transition: opacity .2s;
+    padding: 2px;
+    width: $icon-size;
+    height: $icon-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      opacity: 1;
+      background-color: #eee;
+    }
+  }
+}

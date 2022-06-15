@@ -1,0 +1,86 @@
+@import '../../../scss/variable.scss';
+
+.excel-upload-container {
+  .wait-upload {
+    height: 300px;
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    & > div {
+      width: 100%;
+      text-align: center;
+      opacity: .7;
+      p {
+        text-align: center;
+      }
+    }
+    input[type="file"] {
+      display: none;
+    }
+    &:hover {
+      border-color: #b1b1b1;
+      & > div {
+        opacity: 1;
+      }
+    }
+  }
+  .file-list {
+    width: 100%;
+    background-color: #fff;
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    & > li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border: 1px solid transparent;
+      padding: 15px 20px;
+      & > span.icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        margin-right: 10px;
+      }
+      & > div.status {
+        margin-left: auto;
+        & > svg {
+          margin-right: 15px;
+        }
+      }
+      .file-name {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .file-size {
+        font-size: 12px;
+        color: #888;
+      }
+      &:hover {
+        background-color: #f9f9f9;
+      }
+      &[data-status="wait"] {
+        .file-name, .file-size {
+          color: $normal-color;
+        }
+      }
+      &[data-status="success"] {
+        .file-name, .file-size {
+          color: $success-color;
+        }
+      }
+      &[data-status="fail"] {
+        .file-name, .file-size {
+          color: $error-color;
+        }
+      }
+    }
+  }
+}

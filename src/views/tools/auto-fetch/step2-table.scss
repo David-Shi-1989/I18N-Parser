@@ -1,0 +1,33 @@
+.wording-table-wrap {
+  padding: 20px;
+  background-color: #fff;
+  min-height: 600px;
+  margin-bottom: 20px;
+}
+ul.table-wording-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  & > li {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: baseline;
+    padding: 5px 10px;
+    &:hover {
+      background-color: lightgoldenrodyellow;
+      border-radius: 4px;
+    }
+    i {
+      margin-right: 5px;
+    }
+    .key {
+      flex: 0 0 50px;
+      color: #aaa;
+      font-size: 12px;
+    }
+    .wording {
+      flex: 1 1 100%;
+      font-size: 12px;
+    }
+  }
+}

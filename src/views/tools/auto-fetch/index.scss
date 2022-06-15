@@ -1,0 +1,20 @@
+.tool-auto-fetch-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  & > .step-container {
+    flex: 1 1 100%;
+    padding: 40px 10px;
+  }
+  & > .btn-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    border-top: 1px solid #ddd;
+  }
+}
